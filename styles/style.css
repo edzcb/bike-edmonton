@@ -1,0 +1,297 @@
+/* GLOBAL STYLES */
+
+body{
+    background-color: #000929;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+}
+  
+/* TYPOGRAPHY */
+
+h1 {
+    font-family: "Marmelad";
+    font-size: 54px;
+    font-weight: 400;
+    color: white;
+}
+
+h2 {
+    font-family: "Marmelad";
+    font-size: 45px;
+    font-weight: 400;
+    color: #D6E2F1;
+}
+
+h3 {
+    font-family: "Inter";
+    font-size: 30px;
+    font-weight: 600;
+    color: #D6E2F1;
+}
+
+p {
+    font-family: "Inter";
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 150%;
+    color: white;
+}
+
+.p-sm {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+}
+
+.p-med {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.p-lg {
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.all-caps {
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.title-line {
+    width: 100%;
+    padding: 0px 0px 0px 24px;
+    border-left: 5px solid #F47420;
+}
+
+.footer-li {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+}
+
+.form-label {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+
+.graphic-txt {
+    font-family: "Montserrat", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* BUTTONS */
+
+.btn-light {
+    background-color: #D6E2F1;
+    padding: 16px 28px;
+    height: 50px;
+    width: 152px;
+    color: black;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: none;
+    border-style: none;
+    z-index: 2;
+}
+
+.btn-dark {
+    background-color: #000929;
+    padding: 16px 28px;
+    height: 50px;
+    width: 152px;
+    color: white;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: none;
+    border-style: none;
+}
+
+.btn-orange {
+    background-color: #F47420;
+    padding: 16px 28px;
+    height: 60px;
+    color: white;
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: normal;
+    outline: none;
+    border-style: none;
+}
+
+.btn-transparent {
+    border: 2px solid #F47420;
+    width: 358px;
+    height: 150px;
+    padding: 22px 37px;
+    border-radius: 10px;
+}
+
+/* MARGIN & PADDING */
+.margin-default {
+    margin: 0 80px;
+}
+
+.padding-145 {
+    padding: 145px 0px 0px 0px;
+}
+
+/* LAYOUT */
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-row-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-row-evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-grid {
+    height: 832px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+/* HEADER */
+#be-logo {
+    width: 70px;
+}
+
+#top-nav ul {
+    padding: 60px;
+}
+
+#top-nav li {
+    list-style-type: none;
+    margin-right: 24px;
+    padding-bottom: 4px;
+    display: inline;
+}
+
+#top-nav li:hover {
+    background-color: #F47420;
+    padding: 4px 5px;
+}
+
+.header-nav{
+    grid-row: 1 / span 1;
+}
+
+/* HERO */
+#hero-img {
+    background-image: url(../images/homepage-heroimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    position: relative; 
+}
+
+.gradient {
+    background: linear-gradient(to top, #000929 0%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-tag {
+    grid-row: 4 / span 1;
+}
+
+.hero-txt {
+    font-size: 30px;
+    width: 845px;
+    z-index: 2;
+}
+
+/* EMPOWERING CYCLING */
+.empowering-container {
+    padding-top: 220px;
+}
+
+.pink-logo {
+    height: 390px;
+}
+
+.empowering-txt {
+    width: 600px;
+}
+
+/* VISION SECTION  -- DID NOT USE! */
+
+.vision-container {
+    height: 200px;
+}
+
+/* WAYS TO SUPPORT */
+.icon-img {
+    height: 65px;
+}

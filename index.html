@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marmelad&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!--META-->
     <meta charset="UTF-8">
@@ -13,43 +16,41 @@
     <title>Bike Edmonton | Home</title>
 </head>
 
-<body style="background-color: lightpink;">
+<body>
     <!-- NAVIGATION -->
-    <header>
-        <nav>
-            <div>
-            <ul>
-                <li class="all-caps"><a href="#">About</a></li>
-                <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
-                <li class="all-caps"><a href="#">Rentals</a></li>
-                <li class="all-caps"><a href="#">Services</a></li>
-                <li class="all-caps"><a href="#">Get Involved</a></li>
-                <li class="all-caps"><a href="#">News</a></li>
-                <li class="all-caps"><a href="#">Stories</a></li>
-            </ul>
-                <button><a>Contact</a></button>
-            </div>
-        </nav>
-    </header>
+    <div id="hero-img" class="hero-grid">
+        <div class="gradient"></div>
+        <header class="margin-default header-nav">
+            <nav id="top-nav" class="flex-row-center">
+                <div id="be-logo"><img src="images/bikeedmlogo-navy.png"></div>
+                <ul>
+                    <li class="all-caps"><a href="#">About</a></li>
+                    <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
+                    <li class="all-caps"><a href="#">Rentals</a></li>
+                    <li class="all-caps"><a href="#">Services</a></li>
+                    <li class="all-caps"><a href="#">Get Involved</a></li>
+                    <li class="all-caps"><a href="#">News</a></li>
+                    <li class="all-caps"><a href="#">Stories</a></li>
+                </ul>
+                <button class="btn-dark">Contact</button>
+            </nav>
+        </header>
 
-    <!-- HERO SECTION -->
-    <section>
-        <div>
-            <h2>Whether you ride once a week or year-round
-                Bike Edmonton gives you the tools you need to enjoy cycling.</h2>
-        </div>
-        <div>
-            <button>Donate</button>
-        </div>
-        
-    </section>
+        <section class="hero-tag margin-default">
+            <div class="flex-row-center">
+                <h2 class="hero-txt">Whether you ride once a week or year-round
+                    Bike Edmonton gives you the tools you need to enjoy cycling.</h2>
+                <button class="btn-light">Donate</button>
+            </div>
+        </section>
+    </div>
 
     <!-- EMPOWERING CYCLING SECTION -->
-    <section>
-        <div class="flex-2">
-            <img src="images/bikeedmlogo.png" class="img-100">
-        </div>
+    <section class="flex-row-around empowering-container margin-default">
         <div>
+            <img src="images/bikeedmlogopink.png" class="pink-logo">
+        </div>
+        <div class="flex-column-left empowering-txt">
             <h1>Empowering Cycling</h1>
             <p>Our work has supported funding for the Bike Plan, bike lane construction, and programs that give people resources they need to ride.
                 We have helped thousands of people find a bike to ride and learn to fix their bike.</p>
@@ -57,8 +58,8 @@
     </section>
 
     <!-- VISION QUOTE -->
-     <section>
-        <div>
+     <section class="padding-145">
+        <div class="flex-column-center">
             <h2>Our vision is a city where cycling is</h2>
             <h1>safe, widespread, and accessible</h1>
             <h2>to people of all comfort levels.</h2>
@@ -66,7 +67,7 @@
      </section>
 
     <!-- TILES SECTION -->
-    <section>
+    <section class="padding-145 flex-row-center">
         <div>
             <p>Tile 1</p>
         </div>
@@ -82,27 +83,25 @@
     </section>
 
      <!-- WAYS TO SUPPORT -->
-     <section>
-        <div>
-            <h1>Ways to Support</h1>
-        </div>
-        <div>
-            <ul>
-                <li>
-                    <a href="#">
-                        <div><img src="images/bike icon-orange.png"></div>
+     <section class="padding-145 margin-default">
+        <div class="title-line"><h1>Ways to Support</h1></div>
+        <div class="padding-145">
+            <ul  class="flex-row-evenly">
+                <li class="btn-transparent flex-row-around">
+                    <a href="#" class="flex-row-evenly">
+                        <div><img src="images/bike icon-orange.png" class="icon-img"></div>
                         <div><p>Donate Your Used Bike</p></div>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <div><img src="images/newsletter-icon-orange.png"></div>
+                <li class="btn-transparent flex-row-around">
+                    <a href="#" class="flex-row-evenly">
+                        <div><img src="images/newsletter-icon-orange.png" class="icon-img"></div>
                         <div><p>Subscribe To Our Newsletter</p></div>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <div><img src="images/membership-icon-orange.png"></div>
+                <li class="btn-transparent flex-row-around">
+                    <a href="#" class="flex-row-evenly">
+                        <div><img src="images/membership-icon-orange.png" class="icon-img"></div>
                         <div><p>Get a Membership</p></div>
                     </a>
                 </li>
@@ -116,58 +115,68 @@
         <div>
             <h1>Latest Blog Posts</h1>
             <p>Stay up to date with news, stories, and resources from our blog.</p>
-            <button>Read All Posts</button>
+            <button class="btn-light">Read All Posts</button>
         </div>
         <div>
             <img src="images/bikecapsai.png">
-            <p>Oct 26, 2024</p>
+            <p class="p-med">Oct 26, 2024</p>
             <h3>Bike Edmonton Cycling Caps!</h3>
             <p>Don't miss your chance to show your support for Bike Edmonton.</p>
-            <p>Read More →</p>
+            <p class="p-med"><a href="#">Read More →</a></p>
         </div>
      </section>
 
      <!-- FOOTER -->
     <footer>
         <div> <!-- FOOTER 1 -->
-            <p>Keep Edmontonians Rolling</p>
-            <button>Donate Now</button>
+            <p class="graphic-txt">Keep Edmontonians Rolling</p>
+            <button class="btn-orange">Donate Now</button>
         </div>
 
         <div> <!-- FOOTER 2 LEFT-->
-            <p>Subscribe To Our Newsletter</p>
             <form>
-                <label class="form-label reverse">Email<span style="color: red;">*</span></label>
+                <label class="form-label">Subscribe To Our Newsletter</label>
                 <input type="text" name="Email" class="form-field">
                 <input type="submit" value="Submit" class="form-button">
             </form>
-            <p>Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
+            <p class="p-sm">Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
         </div>
 
         <div> <!-- FOOTER 2 CENTER -->
-            <p>Bike Edmonton</p>
-            <p>10612 105 Ave NW Edmonton, AB T5H 0L2</p>
+            <div>
+                <img src="images/bikeedmlogo-ft.png">
+            </div>
+            <div>
+                <p class="p-med">Bike Edmonton</p>
+                <p class="p-sm">10612 105 Ave NW Edmonton, AB T5H 0L2</p>
+            </div>
+            <div>
+                <img src="images/facebook icon.png">
+                <img src="images/insta icon.png">
+                <img src="images/youtube icon.png">
+                <img src="images/twitter icon.png">
+            </div>
         </div>
         
         <!-- FOOTER 2 RIGHT -->
         <div> <!-- FOOTER 2 RIGHT/L -->
-            <p>About</p>
+            <p class="p-med">About</p>
             <ul>
-                <li class="all-caps"><a href="#">Vision | Mission | Objectives</a></li>
-                <li class="all-caps"><a href="#">History</a></li>
-                <li class="all-caps"><a href="#">Our Staff</a></li>
-                <li class="all-caps"><a href="#">Board & Governance</a></li>
-                <li class="all-caps"><a href="#">Founders & Sponsors</a></li>
+                <li class="footer-li"><a href="#">Vision | Mission | Objectives</a></li>
+                <li class="footer-li"><a href="#">History</a></li>
+                <li class="footer-li"><a href="#">Our Staff</a></li>
+                <li class="footer-li"><a href="#">Board & Governance</a></li>
+                <li class="footer-li"><a href="#">Founders & Sponsors</a></li>
             </ul>
         </div>
         <div> <!-- FOOTER 2 RIGHT/R -->
-            <p>Support Us</p>
+            <p class="p-med">Support Us</p>
             <ul>
-                <li class="all-caps"><a href="#">Membership</a></li>
-                <li class="all-caps"><a href="#">Volunteer</a></li>
-                <li class="all-caps"><a href="#">Donate Your Bike</a></li>
-                <li class="all-caps"><a href="#">Make a Financial Donation</a></li>
-                <li class="all-caps"><a href="#">Events</a></li>
+                <li class="footer-li"><a href="#">Membership</a></li>
+                <li class="footer-li"><a href="#">Volunteer</a></li>
+                <li class="footer-li"><a href="#">Donate Your Bike</a></li>
+                <li class="footer-li"><a href="#">Make a Financial Donation</a></li>
+                <li class="footer-li"><a href="#">Events</a></li>
             </ul>
         </div>
 
