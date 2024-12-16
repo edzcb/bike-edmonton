@@ -4,8 +4,12 @@
     <!-- STYLE SHEETS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/about.css">
 
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marmelad&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- META -->
     <meta charset="UTF-8">
@@ -15,24 +19,253 @@
 
 <body>
     <!-- NAVIGATION -->
-    <header>
-        <nav>
-            <div>
-            <ul>
-                <li class="all-caps"><a href="#">About</a></li>
-                <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
-                <li class="all-caps"><a href="#">Rentals</a></li>
-                <li class="all-caps"><a href="#">Services</a></li>
-                <li class="all-caps"><a href="#">Get Involved</a></li>
-                <li class="all-caps"><a href="#">News</a></li>
-                <li class="all-caps"><a href="#">Stories</a></li>
-            </ul>
-                <button><a>Contact</a></button>
-            </div>
-        </nav>
-    </header>
+    <div id="about-hero-img" class="hero-grid-category">
+        <div class="gradient"></div>
+        <header class="margin-default header-nav">
+            <nav id="top-nav" class="flex-row-center">
+                <div id="be-logo"><img src="images/bikeedmlogo-lightblue.png"></div>
+                <ul>
+                    <li class="all-caps"><a href="#">About</a></li>
+                    <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
+                    <li class="all-caps"><a href="#">Rentals</a></li>
+                    <li class="all-caps"><a href="#">Services</a></li>
+                    <li class="all-caps"><a href="#">Get Involved</a></li>
+                    <li class="all-caps"><a href="#">News</a></li>
+                    <li class="all-caps"><a href="#">Stories</a></li>
+                </ul>
+                <button class="btn-dark">Contact</button>
+            </nav>
+        </header>
 
-    
+        <section class="margin-default hero-summary">
+            <div class="flex-column-left">
+                <h1>About</h1>
+                <h2 class="hero-txt">Established as the Edmonton Bicycle Commuters Society in 1980 and now known as Bike Edmonton, we sell refurbished bikes, help you fix your bike, teach you to ride, host #yegbike events, and promote accessible cycling for everyone.</h2>
+            </div>
+        </section>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <section id="toc" class="margin-default padding-145">
+        <ul class="flex-row-evenly">
+            <li class="all-caps"><a href="#">Mission • Vision • Objectives</a></li>
+            <li class="all-caps"><a href="#">History</a></li>
+            <li class="all-caps"><a href="#">Our Staff</a></li>
+            <li class="all-caps"><a href="#">Board & Governance</a></li>
+            <li class="all-caps"><a href="#">Funders & Sponsors</a></li>
+        </ul>
+    </section>
+
+    <!-- TAGLINE -->
+    <section class="padding-145 flex-column-center">
+        <h1>Cycling Is for Everyone</h1>
+    </section>
+
+    <!-- INFO BLOCKS -->
+    <section class="padding-145">
+        <!-- OUR VISION -->
+        <div class="content-grid">
+            <!--Row 1-->
+            <div class="left-block-1">
+                <img src="images/ourvision.png">
+            </div>
+            <div class="right-block-1">
+                <h3 class="title-line">Our Vision</h3>
+                <p>Everyday cycling in Edmonton is
+                safe, widespread, and accessible
+                to people of all comfort levels.</p>
+            </div>
+            <!--Row 2-->
+            <div class="left-block-2">
+                <h3 class="title-line">Our Mission</h3>
+                <p>Bike Edmonton is a non-profit society dedicated to making everyday cycling in Edmonton safer and more widespread by providing bicycle services,
+                education, and civic representation.We promote the bicycle as a healthy, economical, and ecologically sound mode of transportation.</p>
+            </div>
+            <div class="right-block-2">
+                <img src="images/ourmission.png">
+            </div>
+            <!--Row 3-->
+            <div class="left-block-3">
+                <img src="images/objectives.png">
+            </div>
+            <div class="right-block-3">
+                <h3 class="title-line">Our Vision</h3>
+                <p>1. To provide, administer and maintain a multi-use facility for Edmonton and area dedicated to providing cost-effective,
+                    do-it-yourself bike repair facilities and access to an environmentally sustainable, economical means of transportation</p>
+                <p class="p-med"><a href="#">Read More →</a></p>
+            </div>
+            <!--Row 4-->
+            <div class="left-block-4">
+                <h3 class="title-line">History</h3>
+                <p>In 1980, a group of like-minded, bicycle-commuting enthusiasts decided it was time to band together to encourage and help more people to get around Edmonton by bicycle.</p>
+                <p class="p-med"><a href="#">Read More →</a></p>
+            </div>
+            <div class="right-block-4">
+                <img src="images/history.png">
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR STAFF -->
+    <section id="staff" class="padding-145 margin-default top-border">
+        <div class="flex-column-center">
+            <h3>OUR STAFF</h3>
+        </div>
+        <div class="staff-top-grid padding-85">
+            <div class="staff-top-1">
+                <div><img src="images/coreen.jpg"></div></br>
+                <div class="flex-column-center">
+                    <p>Coreen</p>
+                    <p>Shop Manager</p>
+                </div>
+            </div>
+            <div class="staff-top-2">
+                <div><img src="images/alex.jpg""></div></br>
+                <div class="flex-column-center">
+                    <p>Alex H.</p>
+                    <p>Shop Manager</p>
+                </div>
+            </div>
+            <div class="staff-top-3">
+                <div><img src="images/vaughan.png"></div></br>
+                <div class="flex-column-center">
+                    <p>Vaughan H.</p>
+                    <p>Shop Manager</p>
+                </div>
+            </div>
+            <div class="staff-top-4">
+                <div><img src="images/jan.png"></div></br>
+                <div class="flex-column-center">
+                    <p>Jan P.</p>
+                    <p>Bike Builder</p>
+                </div>
+            </div>
+        </div>
+        <div class="staff-bottom-grid">
+            <div class="staff-bottom-1">
+                <div><img src="images/joshua.jpg"></div></br>
+                <div class="flex-column-center">
+                    <p>Joshua G.</p>
+                    <p>Bike Builder</p>
+                </div>
+            </div>
+            <div class="staff-bottom-2">
+                <div><img src="images/brahm.jpg""></div></br>
+                <div class="flex-column-center">
+                    <p>Brahm O.</p>
+                    <p>Bike Builder</p>
+                </div>
+            </div>
+            <div class="staff-bottom-3">
+                <div><img src="images/chris.jpg"></div></br>
+                <div class="flex-column-center">
+                    <p>Chris C.</p>
+                    <p>Past Executive Director</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-column-center padding-85">
+            <p class="p-med"><a href="#">See More →</a></p>
+        </div>
+    </section>
+
+    <!-- BOARD & GOVERNANCE -->
+    <section class="margin-default padding-85">
+        <div class="flex-row-center board-container">
+            <h3 class="title-line">Board & Governance</h3>
+            <div>
+                <p>The Board of Directors consists of twelve individuals elected by the Bike Edmonton membership.</p>
+                <p class="p-med"><a href="#">Read More →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsor" class="margin-default padding-145 top-border">
+        <div>
+            <h3 class="title-line">Founders & Sponsors</h3>
+        </div>
+        <div class="sponsors-grid padding-85">
+            <div class="sponsor-1"><img src="images/abecotrustlogo.avif"></div>
+            <div class="sponsor-2"><img src="images/edmlogo.jpg"></div>
+            <div class="sponsor-3"><img src="images/canadagovlogo.webp"></div>
+            <div class="sponsor-4"><img src="images/ECO-Canadalogo.jpg"></div>
+        </div>
+        <div class="flex-column-center">
+            <button class="btn-light">Become a Sponsor</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="padding-145">
+        <div class="footer-1"> <!-- FOOTER 1 -->
+            <div class="flex-column-center">
+                <p class="graphic-txt">Keep Edmontonians Rolling</p>
+                <button class="btn-orange">Donate Now</button>
+            </div>
+        </div>
+
+        <!-- FOOTER 2 -->
+        <div class="footer-grid"> 
+        <!-- FOOTER 2 LEFT-->
+            <div class="footer-2-left">
+                <div class="flex-column-left-footerl">
+                    <label class="form-label">Subscribe To Our Newsletter</label>
+                    <form class="flex-row-center">
+                        <input type="text" name="Email" class="form-field">
+                        <input type="submit" value="Submit" class="form-button">
+                    </form>
+                    <p class="p-sm">Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
+                </div>
+            </div>
+
+            <div class="footer-2-center"> <!-- FOOTER 2 CENTER -->
+                <div class="flex-row-center">
+                    <div>
+                        <img src="images/bikeedmlogo-ft.png">
+                    </div>
+                    <div>
+                        <p class="p-med">Bike Edmonton</p>
+                        <p class="p-sm">10612 105 Ave NW</p>
+                        <p class="p-sm">Edmonton, AB T5H 0L2</p>
+                    </div>
+                </div>
+                <div class="flex-row-center-footerc">
+                    <img src="images/facebook icon.png">
+                    <img src="images/insta icon.png">
+                    <img src="images/youtube icon.png">
+                    <img src="images/twitter icon.png">
+                </div>
+            </div>
+            
+            <!-- FOOTER 2 RIGHT -->
+            <div class="footer-2-right">
+                <div class="flex-row-evenly">
+                    <div> <!-- FOOTER 2 RIGHT/L -->
+                        <p class="p-med">About</p>
+                        <ul>
+                            <li><a href="#">Vision | Mission | Objectives</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Staff</a></li>
+                            <li><a href="#">Board & Governance</a></li>
+                            <li><a href="#">Founders & Sponsors</a></li>
+                        </ul>
+                    </div>
+                    <div> <!-- FOOTER 2 RIGHT/R -->
+                        <p class="p-med">Support Us</p>
+                        <ul>
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Donate Your Bike</a></li>
+                            <li><a href="#">Make a Financial Donation</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     
 </body>
 </html>

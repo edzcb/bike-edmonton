@@ -1,0 +1,248 @@
+/* TYPOGRAPHY */
+.title-line {
+    width: 100%;
+    padding: 0px 0px 0px 24px;
+    border-left: 3px solid #D6E2F1;
+    text-transform: uppercase;
+}
+
+#staff p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+/* MARGIN & PADDING */
+.padding-85 {
+    padding: 85px 0;
+}
+
+.top-border {
+    border-top: 1px solid #3C3B3B;
+}
+
+/* LAYOUT */
+.hero-grid-category {
+    height: 832px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 0px;
+}
+
+.content-grid img {
+    display: block;
+    width: 100%; /* Ensures the image stretches across the parent */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.staff-top-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    place-items: center; 
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.staff-top-grid img {
+    display: block;
+    width: 190px; 
+    height: 190px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.staff-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    place-items: center; /* Centers all items both horizontally and vertically */
+    justify-content: center; /* Centers the grid within its container */
+    column-gap: 5px;
+}
+
+.staff-bottom-grid img {
+    display: block;
+    width: 190px; /* Set fixed width for the circular mask */
+    height: 190px; /* Set fixed height for the circular mask */
+    border-radius: 50%; /* Makes the image a perfect circle */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while filling the circle */
+    object-position: center;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    place-items: center; 
+    justify-content: center;
+    column-gap: 5px;
+}
+
+.sponsors-grid img {
+    display: block;
+    width: 280px; 
+    height: 150px; 
+    border-radius: 5%; 
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* HERO */
+#about-hero-img {
+    background-image: url(../images/about-heroimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    position: relative; 
+}
+
+.hero-summary {
+    grid-row: 3 / span 1;
+    position: relative;
+    top: 20px;
+}
+
+/* TABLE OF CONTENTS */
+#toc li {
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid white;
+    text-transform: none;
+    padding-bottom: 5px;
+}
+
+#toc li:hover {
+    background-color: #FAC0B4;
+    padding: 4px 5px;
+    z-index: 2;
+}
+
+/* INFO/IMG BLOCKS */
+.left-block-1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.right-block-1 {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0px 50px;
+}
+
+.left-block-2 {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0px 50px;
+}
+
+.right-block-2 {
+    grid-column: 2;
+    grid-row: 2;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.left-block-3 {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.right-block-3 {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 0px 50px;
+}
+
+.left-block-4 {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 0px 50px;
+}
+
+.right-block-4 {
+    grid-column: 2;
+    grid-row: 4;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* STAFF */
+.staff-top-1{
+    grid-column: 1;
+    align-items: center;
+}
+.staff-top-2{
+    grid-column: 2;
+    align-items: center;
+}
+.staff-top-3{
+    grid-column: 3;
+    align-items: center;
+}
+.staff-top-4{
+    grid-column: 4;
+    align-items: center;
+}
+
+.staff-bottom-1{
+    grid-column: 3;
+    align-items: center;
+}
+.staff-bottom-2{
+    grid-column: 5;
+    align-items: center;
+}
+.staff-bottom-3{
+    grid-column: 7;
+    align-items: center;
+}
+
+/* BOARD & GOVERNANCE */
+.board-container {
+    height: 460px;
+    border-top: 1px solid #3C3B3B;
+}
+
+/* SPONSORS */
+.sponsor-1{
+    grid-column: 1;
+    align-items: center;
+}
+.sponsor-2{
+    grid-column: 2;
+    align-items: center;
+}
+.sponsor-3{
+    grid-column: 3;
+    align-items: center;
+}
+.sponsor-4{
+    grid-column: 4;
+    align-items: center;
+}
+#sponsor button {
+    width: auto;
+}
