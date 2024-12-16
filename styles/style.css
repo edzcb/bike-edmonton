@@ -206,6 +206,10 @@ p {
     padding: 145px 0px 0px 0px;
 }
 
+.padding-85 {
+    padding: 85px 0;
+}
+
 /* LAYOUT */
 .flex-row-center {
     display: flex;
