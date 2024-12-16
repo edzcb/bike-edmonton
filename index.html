@@ -46,7 +46,7 @@
     </div>
 
     <!-- EMPOWERING CYCLING SECTION -->
-    <section class="flex-row-around empowering-container margin-default">
+    <section class="flex-row-around padding-145 margin-default">
         <div>
             <img src="images/bikeedmlogopink.png" class="pink-logo">
         </div>
@@ -67,18 +67,30 @@
      </section>
 
     <!-- TILES SECTION -->
-    <section class="padding-145 flex-row-center">
+    <section class="padding-145">
         <div>
-            <p>Tile 1</p>
-        </div>
-        <div>
-            <p>Tile 23</p>
-        </div>
-        <div>
-            <p>Tile 3</p>
-        </div>
-        <div>
-            <p>Tile 4</p>
+            <ul class="flex-row-around">
+                <li>
+                    <a href="#">
+                        <img src="images/blog-tile.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/event-tile.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/volunteer-tile.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/resources-tile.png">
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -86,7 +98,7 @@
      <section class="padding-145 margin-default">
         <div class="title-line"><h1>Ways to Support</h1></div>
         <div class="padding-145">
-            <ul  class="flex-row-evenly">
+            <ul class="flex-row-evenly">
                 <li class="btn-transparent flex-row-around">
                     <a href="#" class="flex-row-evenly">
                         <div><img src="images/bike icon-orange.png" class="icon-img"></div>
@@ -107,18 +119,17 @@
                 </li>
             </ul>
             </div>
-        
      </section>
 
      <!-- LATEST BLOG POSTS -->
-     <section>
-        <div>
+     <section class="padding-145 margin-default flex-row-start">
+        <div class="flex-column-left">
             <h1>Latest Blog Posts</h1>
             <p>Stay up to date with news, stories, and resources from our blog.</p>
             <button class="btn-light">Read All Posts</button>
         </div>
-        <div>
-            <img src="images/bikecapsai.png">
+        <div class="flex-column-left">
+            <div class="masked-rectangle"><img src="images/bikecapsai.png" class="blog-img"></div>
             <p class="p-med">Oct 26, 2024</p>
             <h3>Bike Edmonton Cycling Caps!</h3>
             <p>Don't miss your chance to show your support for Bike Edmonton.</p>
@@ -127,57 +138,72 @@
      </section>
 
      <!-- FOOTER -->
-    <footer>
-        <div> <!-- FOOTER 1 -->
-            <p class="graphic-txt">Keep Edmontonians Rolling</p>
-            <button class="btn-orange">Donate Now</button>
+    <footer class="padding-145">
+        <div class="footer-1"> <!-- FOOTER 1 -->
+            <div class="flex-column-center">
+                <p class="graphic-txt">Keep Edmontonians Rolling</p>
+                <button class="btn-orange">Donate Now</button>
+            </div>
         </div>
 
-        <div> <!-- FOOTER 2 LEFT-->
-            <form>
-                <label class="form-label">Subscribe To Our Newsletter</label>
-                <input type="text" name="Email" class="form-field">
-                <input type="submit" value="Submit" class="form-button">
-            </form>
-            <p class="p-sm">Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
-        </div>
+        <!-- FOOTER 2 -->
+        <div class="footer-grid"> 
+        <!-- FOOTER 2 LEFT-->
+            <div class="footer-2-left">
+                <div class="flex-column-left-footerl">
+                    <label class="form-label">Subscribe To Our Newsletter</label>
+                    <form class="flex-row-center">
+                        <input type="text" name="Email" class="form-field">
+                        <input type="submit" value="Submit" class="form-button">
+                    </form>
+                    <p class="p-sm">Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
+                </div>
+            </div>
 
-        <div> <!-- FOOTER 2 CENTER -->
-            <div>
-                <img src="images/bikeedmlogo-ft.png">
+            <div class="footer-2-center"> <!-- FOOTER 2 CENTER -->
+                <div class="flex-row-center">
+                    <div>
+                        <img src="images/bikeedmlogo-ft.png">
+                    </div>
+                    <div>
+                        <p class="p-med">Bike Edmonton</p>
+                        <p class="p-sm">10612 105 Ave NW</p>
+                        <p class="p-sm">Edmonton, AB T5H 0L2</p>
+                    </div>
+                </div>
+                <div class="flex-row-center-footerc">
+                    <img src="images/facebook icon.png">
+                    <img src="images/insta icon.png">
+                    <img src="images/youtube icon.png">
+                    <img src="images/twitter icon.png">
+                </div>
             </div>
-            <div>
-                <p class="p-med">Bike Edmonton</p>
-                <p class="p-sm">10612 105 Ave NW Edmonton, AB T5H 0L2</p>
+            
+            <!-- FOOTER 2 RIGHT -->
+            <div class="footer-2-right">
+                <div class="flex-row-evenly">
+                    <div> <!-- FOOTER 2 RIGHT/L -->
+                        <p class="p-med">About</p>
+                        <ul>
+                            <li class="footer-li"><a href="#">Vision | Mission | Objectives</a></li>
+                            <li class="footer-li"><a href="#">History</a></li>
+                            <li class="footer-li"><a href="#">Our Staff</a></li>
+                            <li class="footer-li"><a href="#">Board & Governance</a></li>
+                            <li class="footer-li"><a href="#">Founders & Sponsors</a></li>
+                        </ul>
+                    </div>
+                    <div> <!-- FOOTER 2 RIGHT/R -->
+                        <p class="p-med">Support Us</p>
+                        <ul>
+                            <li class="footer-li"><a href="#">Membership</a></li>
+                            <li class="footer-li"><a href="#">Volunteer</a></li>
+                            <li class="footer-li"><a href="#">Donate Your Bike</a></li>
+                            <li class="footer-li"><a href="#">Make a Financial Donation</a></li>
+                            <li class="footer-li"><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="images/facebook icon.png">
-                <img src="images/insta icon.png">
-                <img src="images/youtube icon.png">
-                <img src="images/twitter icon.png">
-            </div>
-        </div>
-        
-        <!-- FOOTER 2 RIGHT -->
-        <div> <!-- FOOTER 2 RIGHT/L -->
-            <p class="p-med">About</p>
-            <ul>
-                <li class="footer-li"><a href="#">Vision | Mission | Objectives</a></li>
-                <li class="footer-li"><a href="#">History</a></li>
-                <li class="footer-li"><a href="#">Our Staff</a></li>
-                <li class="footer-li"><a href="#">Board & Governance</a></li>
-                <li class="footer-li"><a href="#">Founders & Sponsors</a></li>
-            </ul>
-        </div>
-        <div> <!-- FOOTER 2 RIGHT/R -->
-            <p class="p-med">Support Us</p>
-            <ul>
-                <li class="footer-li"><a href="#">Membership</a></li>
-                <li class="footer-li"><a href="#">Volunteer</a></li>
-                <li class="footer-li"><a href="#">Donate Your Bike</a></li>
-                <li class="footer-li"><a href="#">Make a Financial Donation</a></li>
-                <li class="footer-li"><a href="#">Events</a></li>
-            </ul>
         </div>
 
     </footer>

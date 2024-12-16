@@ -11,6 +11,8 @@ a {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 ul a {
@@ -32,6 +34,7 @@ h2 {
     font-size: 45px;
     font-weight: 400;
     color: #D6E2F1;
+    margin: 0px;
 }
 
 h3 {
@@ -39,6 +42,7 @@ h3 {
     font-size: 30px;
     font-weight: 600;
     color: #D6E2F1;
+    margin: 0px;
 }
 
 p {
@@ -93,7 +97,7 @@ p {
 
 .form-label {
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: white;
 }
@@ -103,7 +107,7 @@ p {
     font-size: 64px;
     font-weight: 700;
     font-style: italic;
-    color: white;
+    color: #D6E2F1;
     text-transform: uppercase;
 }
 
@@ -112,8 +116,7 @@ p {
 .btn-light {
     background-color: #D6E2F1;
     padding: 16px 28px;
-    height: 50px;
-    width: 152px;
+    width: 170px;
     color: black;
     font-family: "Inter";
     font-size: 16px;
@@ -182,6 +185,14 @@ p {
     align-items: center;
 }
 
+.flex-row-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    gap: 218px;
+}
+
 .flex-row-around {
     display: flex;
     flex-direction: row;
@@ -197,10 +208,27 @@ p {
     gap: 24px;
 }
 
+.flex-row-center-footerc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
 .flex-column-left {
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-column-left-footerl {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
 }
 
 .flex-column-center {
@@ -218,6 +246,17 @@ p {
     align-items: center;
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: stretch; /* Allows columns to expand fully */
+    justify-items: center; /* Ensures each column content is horizontally centered */
+    padding: 45px 5px;
+    width: 100%;
+    border-top: 2px solid #3C3B3B;
+}
+
 /* HEADER */
 #be-logo {
     width: 70px;
@@ -225,6 +264,7 @@ p {
 
 #top-nav ul {
     padding: 60px;
+    z-index: 2;
 }
 
 #top-nav li {
@@ -232,11 +272,13 @@ p {
     margin-right: 24px;
     padding-bottom: 4px;
     display: inline;
+    z-index: 2;
 }
 
 #top-nav li:hover {
     background-color: #F47420;
     padding: 4px 5px;
+    z-index: 2;
 }
 
 .header-nav{
@@ -273,10 +315,6 @@ p {
 }
 
 /* EMPOWERING CYCLING */
-.empowering-container {
-    padding-top: 220px;
-}
-
 .pink-logo {
     height: 390px;
 }
@@ -285,13 +323,59 @@ p {
     width: 600px;
 }
 
-/* VISION SECTION  -- DID NOT USE! */
-
-.vision-container {
-    height: 200px;
-}
-
 /* WAYS TO SUPPORT */
 .icon-img {
     height: 65px;
+}
+
+/* BLOG */
+.blog-img {
+    width: 455px;
+}
+
+.masked-rectangle {
+    width: 455px;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.masked-rectangle img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+}
+
+.footer-1 {
+    width: 100%;
+    padding: 24px 0px 70px 0px;
+    border-top: 2px solid #3C3B3B;
+}
+
+.footer-2 {
+    width: 100%;
+    padding: 24px 0px 50px 0px;
+    border-top: 2px solid #3C3B3B;
+}
+
+.footer-2-left,
+.footer-2-center,
+.footer-2-right {
+    display: flex;
+    flex-direction: column;
+    width: 345px;
+    align-items: center;
+    justify-content: start;
+    text-align: start; /* Ensures text is centered */
+    padding: 5px;
+    gap: 30px;
+}
+
+footer li {
+    margin-bottom: 10px;
+    color: #959595;
 }
