@@ -35,8 +35,8 @@
 
 .content-grid img {
     display: block;
-    width: 100%; /* Ensures the image stretches across the parent */
-    height: auto; /* Maintains aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 .staff-top-grid {
@@ -61,23 +61,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    place-items: center; /* Centers all items both horizontally and vertically */
-    justify-content: center; /* Centers the grid within its container */
+    place-items: center;
+    justify-content: center;
     column-gap: 5px;
 }
 
 .staff-bottom-grid img {
     display: block;
-    width: 190px; /* Set fixed width for the circular mask */
-    height: 190px; /* Set fixed height for the circular mask */
-    border-radius: 50%; /* Makes the image a perfect circle */
-    object-fit: cover; /* Ensures the image maintains aspect ratio while filling the circle */
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
     object-position: center;
 }
 
 .sponsors-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns on desktop */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     place-items: center;
     justify-content: center;
@@ -86,8 +86,8 @@
 
 .sponsors-grid img {
     display: block;
-    width: 280px; /* Larger width for desktop */
-    height: 150px; /* Adjust height accordingly */
+    width: 280px;
+    height: 150px;
     border-radius: 5%;
     object-fit: cover;
     object-position: center;
@@ -100,10 +100,10 @@
     background-position: center;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, space, content */
+    grid-template-rows: auto 1fr auto;
     position: relative; 
     height: 832px;
-    color: white; /* For text visibility over the image */ 
+    color: white;
 }
 
 .about-hero-txt {
@@ -246,8 +246,8 @@
 }
 
 .mobile-content-grid img {
-    width: 100%; /* Makes the images responsive to the container */
-    height: auto; /* Ensures the images maintain their aspect ratio */
+    width: 100%; 
+    height: auto;
     object-fit: cover;
 }
 

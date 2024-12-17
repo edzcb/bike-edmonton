@@ -33,10 +33,10 @@
     background-position: center;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, space, content */
+    grid-template-rows: auto 1fr auto;
     position: relative; 
     height: 832px;
-    color: white; /* For text visibility over the image */ 
+    color: white;
 }
 
 /* SERVICE TILES */

@@ -380,7 +380,7 @@ p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 10px; /* Ensures the overlay matches the tile's rounded corners */
+    border-radius: 10px;
 }
 
 .masked-tile {
@@ -392,7 +392,7 @@ p {
 .masked-tile img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the tile */
+    object-fit: cover;
     position: relative;
 }
 
@@ -402,11 +402,10 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 1, 44, 0.33); /* Semi-transparent dark overlay */
-    border-radius: 10px; /* Matches the tile's rounded corners */
-    z-index: 1; /* Ensures the overlay is on top of the image */
+    background: rgba(0, 1, 44, 0.33); 
+    border-radius: 10px; 
+    z-index: 1;
 }
-
 .tile-text {
     position: absolute;
     bottom: -30px;
@@ -415,7 +414,7 @@ p {
     color: white;
     font-size: 35px;
     font-weight: 300;
-    z-index: 2; /* Ensures the text is above the overlay */
+    z-index: 2;
     text-align: center;
     padding: 5px 10px;
 }
@@ -790,7 +789,7 @@ footer li {
     }
 
     #be-logo img {
-        height: 40px;  /* Resize logo */
+        height: 40px;
     }
 
     #top-nav ul {
