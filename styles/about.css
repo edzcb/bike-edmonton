@@ -312,30 +312,27 @@
     #toc {
         display: none;
     }
-    /* Resize the images to fit mobile screens better */
     .staff-top-grid img,
     .staff-bottom-grid img {
-        width: 100px;  /* Smaller circular images */
+        width: 100px;
         height: 100px;
     }
-    /* Ensure the "See More" link is centered and properly spaced */
+
     .staff-bottom-grid .flex-column-center {
         text-align: center;
         padding-top: 20px;
     }
 
     .sponsors-grid {
-        grid-template-columns: 1fr; /* 1 column per row */
-        row-gap: 20px; /* Space between rows */
+        grid-template-columns: 1fr;
+        row-gap: 20px;
     }
 
-    /* Resize the images for mobile */
     .sponsors-grid img {
-        width: 200px;  /* Smaller width for mobile */
-        height: 100px; /* Smaller height for mobile */
+        width: 200px;
+        height: 100px;
     }
 
-    /* Optional: Center the "Become a Sponsor" button */
     #sponsor button {
         width: auto;
         padding: 20px 30px;

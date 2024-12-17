@@ -137,6 +137,12 @@ p {
     letter-spacing: normal;
     outline: none;
     border-style: none;
+    z-index: 2;
+    cursor: pointer;
+}
+.btn-dark:hover {
+    background-color: #FDE0DA;
+    color: black;
 }
 
 .btn-orange {
@@ -152,6 +158,12 @@ p {
     letter-spacing: normal;
     outline: none;
     border-style: none;
+    cursor: pointer;
+}
+
+.btn-orange:hover {
+    background-color: #04387C;
+    color: white;
 }
 
 .btn-transparent {
@@ -178,7 +190,6 @@ p {
 }
 
 .form-field {
-    flex: 1;
     padding: 8px;
     font-size: 14px;
 }
@@ -274,6 +285,7 @@ p {
 /* HEADER */
 #be-logo {
     width: 70px;
+    z-index: 10;
 }
 
 #top-nav ul {
@@ -306,18 +318,18 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, space, content */
+    grid-template-rows: auto 1fr auto; 
     position: relative; 
     height: 832px;
-    color: white; /* For text visibility over the image */
+    color: white;
 }
 
 .hero-content {
     grid-row: 3; 
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Push items upwards */
-    padding: 30px 80px 100px; /* Adjust padding for better spacing */
+    align-items: flex-start;
+    padding: 30px 80px 100px;
     z-index: 2;
     flex-wrap: wrap;
 }
@@ -348,6 +360,83 @@ p {
     width: 600px;
 }
 
+/* CATEGORY TILES */
+
+.index-tiles-grid {
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    column-gap: 20x;
+    row-gap: 70px;
+}
+
+.tile-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Ensures the overlay matches the tile's rounded corners */
+}
+
+.masked-tile {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.masked-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the tile */
+    position: relative;
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 1, 44, 0.33); /* Semi-transparent dark overlay */
+    border-radius: 10px; /* Matches the tile's rounded corners */
+    z-index: 1; /* Ensures the overlay is on top of the image */
+}
+
+.tile-text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    z-index: 2; /* Ensures the text is above the overlay */
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.tile1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.tile2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.tile3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.tile4 {
+    grid-column: 4;
+    grid-row: 1;
+}
+
 /* WAYS TO SUPPORT */
 .icon-img {
     height: 65px;
@@ -376,7 +465,6 @@ p {
 }
 
 /* FOOTER */
-/* Footer Styles */
 .footer {
     background-color: #000929;
     color: #959595;
@@ -472,43 +560,43 @@ footer li {
     /* LAYOUT */
 
     .flex-row-around li {
-        width: 45%;  /* Adjust width to fit two tiles per row */
-        margin-bottom: 35px;  /* Add space between the rows */
+        width: 45%;
+        margin-bottom: 35px;
     }
 
     .flex-row-around {
-        flex-direction: column; /* Stack tiles vertically */
-        align-items: center; /* Center the tiles horizontally */
-        justify-content: center; /* Center tiles vertically if necessary */
-        gap: 20px; /* Add space between stacked tiles */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
 
     .flex-row-around li {
-        width: 90%; /* Make tiles responsive */
-        max-width: 350px; /* Limit the max width for smaller screens */
+        width: 90%;
+        max-width: 350px;
     }
 
     .flex-row-evenly {
         gap: 10px;
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center; /* Center-align the content for better appearance */
+        flex-direction: column;
+        text-align: center;
     }
 
     .flex-column-left {
-        align-items: center; /* Center text alignment */
+        align-items: center;
     }
 
     .flex-row-start {
-        gap: 30px; /* Reduce gap for very small screens */
+        gap: 30px;
     }
 
     .flex-column-left h1 {
-        font-size: 22px; /* Further reduce font size for small screens */
+        font-size: 22px;
     }
 
     /* PADDING & MARGIN*/
     .padding-145 {
-        padding: 50px 0px 0px 0px; /* Reduce top padding for mobile */
+        padding: 50px 0px 0px 0px;
     }
 
     .margin-default{
@@ -517,93 +605,116 @@ footer li {
 
     /* HERO */
     #hero-img {
-        height: 600px; /* Adjust height for smaller screens */
-        background-position: top; /* Focus on the top part if needed */
+        height: 600px;
+        background-position: top;
     }
 
     .hero-content {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align text and button to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-txt {
-        width: 100%; /* Take full width on smaller screens */
-        margin-bottom: 20px; /* Add spacing between text and button */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .hero-content button {
-        margin-left: 0; /* Center button under text */
-        align-self: flex-start; /* Align button to match text position */
+        margin-left: 0;
+        align-self: flex-start;
     }
 
     /* EMPOWERING */
     .pink-logo {
-        height: 200px; /* Reduce the height for smaller screens */
-        width: auto; /* Maintain aspect ratio */
+        height: 200px;
+        width: auto;
     }
 
     .empowering-txt {
-        width: 100%; /* Adjust text width to fit smaller screens */
+        width: 100%;
     }
 
     .blog-img {
-        width: 100%; /* Ensure image fits the container */
-        max-width: 320px; /* Set a max-width for smaller screens */
+        width: 100%;
+        max-width: 320px;
     }
 
     .masked-rectangle {
-        max-width: 320px; /* Adjust the masked container for very small screens */
+        max-width: 320px;
     }
 
     /* TYPOGRAPHY */
     h1 {
-        font-size: 32px; /* Reduced from 54px */
+        font-size: 32px;
     }
 
     h2 {
-        font-size: 28px; /* Reduced from 45px */
+        font-size: 28px;
     }
 
     h3, h4 {
-        font-size: 20px; /* Reduced from 30px */
+        font-size: 20px;
     }
 
     p {
-        font-size: 18px; /* Reduced from 26px */
-        line-height: 140%; /* Adjusted line height */
+        font-size: 18px;
+        line-height: 140%;
     }
 
     .p-sm {
-        font-size: 10px; /* Reduced from 12px */
+        font-size: 10px;
     }
 
     .p-med {
-        font-size: 14px; /* Reduced from 16px */
+        font-size: 14px;
     }
 
     .all-caps {
-        font-size: 12px; /* Reduced frm 15px */
+        font-size: 12px;
     }
 
     .graphic-txt {
-        font-size: 40px; /* Reduced from 64px */
+        font-size: 40px;
+    }
+
+    /* TILES */
+    .index-tiles-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    .tile-text {
+        font-size: 20px;
+        bottom: 10px;
+        font-weight: 500;
+    }
+
+    .masked-tile img {
+        height: 100%;
+    }
+
+    .tile-content {
+        height: 250px;
     }
 
     /* FOOTER */
     .footer-1 {
-        padding: 24px 0px 50px 0px; /* Reduce padding for smaller screens */
-        text-align: center; /* Center the text */
+        padding: 24px 0px 50px 0px;
+        text-align: center;
     }
 
     /* Footer 2 */
     .footer2 {
         display: flex;
-        flex-direction: column; /* Stack the columns vertically */
-        gap: 30px; /* Reduce gap between the sections */
+        flex-direction: column;
+        gap: 30px;
         padding: 30px;
     }
 
-    /* Footer 2 - left (Newsletter) */
+    /* Footer 2 - left*/
     .footer-newsletter {
         text-align: center;
     }
@@ -617,11 +728,11 @@ footer li {
 
     .footer-newsletter .form-field {
         width: 100%;
-        max-width: 300px; /* Set a max-width for the input field */
+        max-width: 300px;
         margin-bottom: 10px;
     }
 
-    /* Footer 2 - center (Contact Info) */
+    /* Footer 2 - center */
     .footer-contact {
         display: flex;
         flex-direction: column;
@@ -630,12 +741,12 @@ footer li {
 
     .contact-info {
         display: flex;
-        flex-direction: row; /* Stack the items vertically */
+        flex-direction: row;
         text-align: center;
     }
 
     .contact-info p {
-        text-align: center; /* Center the contact info */
+        text-align: center;
     }
 
     .social-media {
@@ -648,9 +759,9 @@ footer li {
         margin: 10px 5px;
     }
 
-    /* Footer 2 - right (Links) */
+    /* Footer 2 - right */
     .footer-links {
-        display: none; /* Hide the links section */
+        display: none;
     }
 
 }
@@ -658,21 +769,19 @@ footer li {
 /* LAPTOP */
 
 @media screen and (max-width: 1279px) and (min-width: 1024px) {
-    /* Header adjustment for medium screens */
     .hidden-mobile {
-        display: flex;  /* Show desktop navigation */
+        display: flex;
     }
 
     .hidden-desktop {
-        display: none;  /* Hide hamburger menu */
+        display: none;
     }
 
-    /* Header adjustments */
     .header-nav {
-        padding: 0 10px;  /* Adjust padding to ensure content is centered */
+        padding: 0 10px;
     }
 
-    /* Top Nav adjustments */
+    /* Top Nav */
     #top-nav {
         display: flex;
         justify-content: space-around;
@@ -692,11 +801,11 @@ footer li {
     }
 
     #top-nav ul li {
-        margin: 0 10px;  /* Reduce space between items */
+        margin: 0 10px;
     }
 
     #top-nav ul li a {
-        font-size: 12px;  /* Smaller font size */
+        font-size: 12px;
     }
 
     #top-nav button.btn-dark {
@@ -706,206 +815,6 @@ footer li {
     }
 
     .margin-default {
-        margin: 0 20px;  /* Margin adjustment */
-    }
-}
-
-/* DESKTOP - Larger screens (1280px and above) */
-@media screen and (max-width: 1440px) and (min-width: 1280px) {
-    .hidden-mobile {
-        display: flex;  /* Show desktop navigation */
-    }
-
-    .hidden-desktop {
-        display: none;  /* Hide hamburger menu */
-    }
-}
-
-/* LAYOUT - Larger screens (1440px and above) */
-@media screen and (min-width: 1441px) {
-    
-    /* Flex row adjustments for large screens */
-    .flex-row-around li {
-        width: 30%;  /* Increase width to allow 3 tiles per row */
-        margin-bottom: 50px;  /* Add more space between the rows */
-    }
-
-    .flex-row-around {
-        flex-direction: row; /* Display tiles in a row for large screens */
-        align-items: stretch; /* Stretch the items to fill the available space */
-        justify-content: space-between; /* Ensure even spacing between items */
-        gap: 30px; /* Increase gap between tiles */
-    }
-
-    .flex-row-around li {
-        width: 30%; /* Increase width of individual tiles for larger screens */
-        max-width: none; /* Remove the max-width constraint */
-    }
-
-    .flex-row-evenly {
-        gap: 20px;
-        flex-direction: row; /* Display images and text in a row */
-        text-align: center; /* Keep content centered */
-    }
-
-    .flex-column-left {
-        align-items: center; /* Center text alignment */
-    }
-
-    .flex-row-start {
-        gap: 40px; /* Increase gap for large screens */
-    }
-
-    .flex-column-left h1 {
-        font-size: 36px; /* Increase font size for large screens */
-    }
-
-    /* PADDING & MARGIN */
-    .padding-145 {
-        padding: 80px 0px 0px 0px; /* Increase top padding for large screens */
-    }
-
-    .margin-default {
-        margin: 0 80px; /* Increase margins for large screens to center content better */
-    }
-
-    /* HERO */
-    #hero-img {
-        height: 800px; /* Increase hero image height for larger screens */
-        background-position: center; /* Center the background */
-    }
-
-    .hero-content {
-        flex-direction: row; /* Display content in a row for large screens */
-        align-items: center; /* Align content vertically in the center */
-    }
-
-    .hero-txt {
-        width: 50%; /* Make text take up half the screen */
-        margin-bottom: 30px; /* Increase space between text and button */
-    }
-
-    .hero-content button {
-        margin-left: 20px; /* Space out the button more from the text */
-        align-self: flex-start; /* Align the button to the left */
-    }
-
-    /* EMPOWERING */
-    .pink-logo {
-        height: 250px; /* Increase logo size */
-        width: auto; /* Maintain aspect ratio */
-    }
-
-    .empowering-txt {
-        width: 50%; /* Allow text to take up more space */
-    }
-
-    .blog-img {
-        width: 100%; /* Ensure image fits container */
-        max-width: 450px; /* Set a larger max-width */
-    }
-
-    .masked-rectangle {
-        max-width: 450px; /* Increase max-width for larger screens */
-    }
-
-    /* TYPOGRAPHY */
-    h1 {
-        font-size: 50px; /* Increase font size for large screens */
-    }
-
-    h2 {
-        font-size: 40px; /* Increase font size for large screens */
-    }
-
-    h3, h4 {
-        font-size: 28px; /* Increase font size for large screens */
-    }
-
-    p {
-        font-size: 22px; /* Increase font size for readability */
-        line-height: 150%; /* Adjust line height for large text */
-    }
-
-    .p-sm {
-        font-size: 14px; /* Increase small text size */
-    }
-
-    .p-med {
-        font-size: 18px; /* Increase medium text size */
-    }
-
-    .all-caps {
-        font-size: 16px; /* Increase all-caps font size */
-    }
-
-    .graphic-txt {
-        font-size: 70px; /* Increase graphic text size */
-    }
-
-    /* FOOTER */
-    .footer-1 {
-        padding: 40px 0px 70px 0px; /* Increase padding for large screens */
-        text-align: center; /* Center the text */
-    }
-
-    /* Footer 2 */
-    .footer2 {
-        display: flex;
-        flex-direction: row; /* Display footer sections in a row */
-        gap: 50px; /* Increase gap between the sections */
-        padding: 50px;
-    }
-
-    /* Footer 2 - left (Newsletter) */
-    .footer-newsletter {
-        text-align: center;
-    }
-
-    .footer-newsletter form {
-        display: flex;
-        flex-direction: row;
-        align-items: center; /* Align input fields and buttons side by side */
-        margin: 20px 0;
-    }
-
-    .footer-newsletter .form-field {
-        width: 100%;
-        max-width: 400px; /* Increase width of form fields */
-        margin-bottom: 20px;
-    }
-
-    /* Footer 2 - center (Contact Info) */
-    .footer-contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center; /* Align items side by side */
-    }
-
-    .contact-info {
-        display: flex;
-        flex-direction: row; /* Stack the items horizontally */
-        text-align: center;
-    }
-
-    .contact-info p {
-        text-align: center;
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px; /* Increase margin to separate from content */
-    }
-
-    .social-media img {
-        margin: 15px 10px; /* Increase spacing between social icons */
-    }
-
-    /* Footer 2 - right (Links) */
-    .footer-links {
-        display: flex;
-        flex-direction: row;
-        gap: 30px; /* Increase gap between footer links */
+        margin: 0 20px;
     }
 }
