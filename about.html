@@ -19,14 +19,14 @@
 
 <body>
     <!-- NAVIGATION -->
-    <div id="about-hero-img" class="hero-grid-category">
+    <section id="about-hero-img">
         <div class="gradient"></div>
         <header class="margin-default header-nav">
-            <nav id="top-nav" class="flex-row-center">
-                <div id="be-logo"><img src="images/bikeedmlogo-lightblue.png"></div>
+            <nav id="top-nav" class="flex-row-center hidden-mobile">
+                <div id="be-logo"><a href="index.html"><img src="images/bikeedmlogo-lightblue.png"></a></div>
                 <ul>
-                    <li class="all-caps"><a href="#">About</a></li>
-                    <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
+                    <li class="all-caps"><a href="about.html">About</a></li>
+                    <li class="all-caps"><a href="buy.html">Buy Bikes & Parts</a></li>
                     <li class="all-caps"><a href="#">Rentals</a></li>
                     <li class="all-caps"><a href="#">Services</a></li>
                     <li class="all-caps"><a href="#">Get Involved</a></li>
@@ -36,14 +36,25 @@
                 <button class="btn-dark">Contact</button>
             </nav>
         </header>
+    
+    <!-- MOBILE NAVIGATION -->
+    <nav id="top-nav" class="margin-default flex-row-center hidden-desktop">
+        <div id="be-logo"><a href="index.html"><img src="images/bikeedmlogo-lightblue.png"></a></div>
 
-        <section class="margin-default hero-summary">
-            <div class="flex-column-left">
-                <h1>About</h1>
-                <h2 class="hero-txt">Established as the Edmonton Bicycle Commuters Society in 1980 and now known as Bike Edmonton, we sell refurbished bikes, help you fix your bike, teach you to ride, host #yegbike events, and promote accessible cycling for everyone.</h2>
-            </div>
-        </section>
-    </div>
+        <div><!-- HAMBURGER --> 
+            <svg width="48" height="23" viewBox="0 0 48 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="2" transform="translate(0 0.634029)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 10.634)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 20.634)" fill="white"/>
+            </svg>
+        </div>
+    </nav>
+    
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <h2 class="about-hero-txt">Bike Edmonton has been supporting cycling in the community since 1980.</h2>
+        </div>
+    </section>
 
     <!-- TABLE OF CONTENTS -->
     <section id="toc" class="margin-default padding-145">
@@ -62,7 +73,7 @@
     </section>
 
     <!-- INFO BLOCKS -->
-    <section class="padding-145">
+    <section class="padding-145 hidden-mobile">
         <!-- OUR VISION -->
         <div class="content-grid">
             <!--Row 1-->
@@ -101,6 +112,51 @@
                 <p class="p-med"><a href="#">Read More →</a></p>
             </div>
             <div class="right-block-4">
+                <img src="images/history.png">
+            </div>
+        </div>
+    </section>
+   
+    <!-- MOBILE INFO BLOCKS -->
+    <section class="padding-145 hidden-desktop">
+        <!-- OUR VISION -->
+        <div class="mobile-content-grid">
+            <!--Row 1-->
+            <div class="img-block-1">
+                <img src="images/ourvision.png">
+            </div>
+            <div class="txt-block-1">
+                <h3 class="title-line">Our Vision</h3>
+                <p>Everyday cycling in Edmonton is
+                safe, widespread, and accessible
+                to people of all comfort levels.</p>
+            </div>
+            <!--Row 2-->
+            <div class="txt-block-2">
+                <h3 class="title-line">Our Mission</h3>
+                <p>Bike Edmonton is a non-profit society dedicated to making everyday cycling in Edmonton safer and more widespread by providing bicycle services,
+                education, and civic representation.We promote the bicycle as a healthy, economical, and ecologically sound mode of transportation.</p>
+            </div>
+            <div class="img-block-2">
+                <img src="images/ourmission.png">
+            </div>
+            <!--Row 3-->
+            <div class="img-block-3">
+                <img src="images/objectives.png">
+            </div>
+            <div class="txt-block-3">
+                <h3 class="title-line">Our Vision</h3>
+                <p>1. To provide, administer and maintain a multi-use facility for Edmonton and area dedicated to providing cost-effective,
+                    do-it-yourself bike repair facilities and access to an environmentally sustainable, economical means of transportation</p>
+                <p class="p-med"><a href="#">Read More →</a></p>
+            </div>
+            <!--Row 4-->
+            <div class="txt-block-4">
+                <h3 class="title-line">History</h3>
+                <p>In 1980, a group of like-minded, bicycle-commuting enthusiasts decided it was time to band together to encourage and help more people to get around Edmonton by bicycle.</p>
+                <p class="p-med"><a href="#">Read More →</a></p>
+            </div>
+            <div class="img-block-4">
                 <img src="images/history.png">
             </div>
         </div>

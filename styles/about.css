@@ -77,36 +77,39 @@
 
 .sponsors-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns on desktop */
     grid-template-rows: auto;
-    place-items: center; 
+    place-items: center;
     justify-content: center;
     column-gap: 5px;
 }
 
 .sponsors-grid img {
     display: block;
-    width: 280px; 
-    height: 150px; 
-    border-radius: 5%; 
+    width: 280px; /* Larger width for desktop */
+    height: 150px; /* Adjust height accordingly */
+    border-radius: 5%;
     object-fit: cover;
     object-position: center;
 }
-
 
 /* HERO */
 #about-hero-img {
     background-image: url(../images/about-heroimg.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, space, content */
     position: relative; 
+    height: 832px;
+    color: white; /* For text visibility over the image */ 
 }
 
-.hero-summary {
-    grid-row: 3 / span 1;
-    position: relative;
-    top: 20px;
+.about-hero-txt {
+    font-size: 30px;
+    width: 100%;
+    z-index: 2;
 }
 
 /* TABLE OF CONTENTS */
@@ -222,22 +225,121 @@
 }
 
 /* SPONSORS */
-.sponsor-1{
-    grid-column: 1;
+.sponsor-1,
+.sponsor-2,
+.sponsor-3,
+.sponsor-4 {
     align-items: center;
 }
-.sponsor-2{
-    grid-column: 2;
-    align-items: center;
-}
-.sponsor-3{
-    grid-column: 3;
-    align-items: center;
-}
-.sponsor-4{
-    grid-column: 4;
-    align-items: center;
-}
+
 #sponsor button {
     width: auto;
+}
+
+/* ------ MOBILE BLOCKS ----- */
+.mobile-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8,1fr);
+    align-items: center;
+    gap: 0px;
+}
+
+.mobile-content-grid img {
+    width: 100%; /* Makes the images responsive to the container */
+    height: auto; /* Ensures the images maintain their aspect ratio */
+    object-fit: cover;
+}
+
+.img-block-1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.txt-block-1 {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0px 50px;
+}
+
+.img-block-2 {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.txt-block-2 {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 0px 50px;
+}
+
+.img-block-3 {
+    grid-column: 1;
+    grid-row: 5;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.txt-block-3 {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 0px 50px;
+}
+
+.img-block-4 {
+    grid-column: 1;
+    grid-row: 7;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.txt-block-4 {
+    grid-column: 1;
+    grid-row: 8;
+    padding: 0px 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #toc {
+        display: none;
+    }
+    /* Resize the images to fit mobile screens better */
+    .staff-top-grid img,
+    .staff-bottom-grid img {
+        width: 100px;  /* Smaller circular images */
+        height: 100px;
+    }
+    /* Ensure the "See More" link is centered and properly spaced */
+    .staff-bottom-grid .flex-column-center {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: 1fr; /* 1 column per row */
+        row-gap: 20px; /* Space between rows */
+    }
+
+    /* Resize the images for mobile */
+    .sponsors-grid img {
+        width: 200px;  /* Smaller width for mobile */
+        height: 100px; /* Smaller height for mobile */
+    }
+
+    /* Optional: Center the "Become a Sponsor" button */
+    #sponsor button {
+        width: auto;
+        padding: 20px 30px;
+        margin-top: 20px;
+    }
+
 }

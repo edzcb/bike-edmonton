@@ -27,16 +27,16 @@
 }
 
 /* HERO */
-#service-hero-img {
+#services-hero-img {
     background-image: url(../images/services-heroimg.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, space, content */
     position: relative; 
-}
-.hero-summary {
-    grid-row: 4 / span 1;
-    position: relative;
+    height: 832px;
+    color: white; /* For text visibility over the image */ 
 }
 
 /* SERVICE TILES */
@@ -107,4 +107,26 @@
     grid-row: 2;
 }
 
+@media screen and (max-width: 767px) {
+    .tiles-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack tiles vertically */
+        grid-template-rows: repeat(5, auto); /* Each tile takes one row */
+        row-gap: 30px; /* Reduced gap between tiles on mobile */
+        text-align: center;
+    }
 
+    .tile-text {
+        font-size: 20px; /* Smaller text on mobile */
+        bottom: 10px;
+        font-weight: 500; /* Move text closer to the tile on mobile */
+    }
+
+    .masked-tile img {
+        height: 100%; /* Ensure images take full height on smaller screens */
+    }
+
+    .tile-content {
+        height: 250px; /* Adjust height for each tile */
+    }
+}

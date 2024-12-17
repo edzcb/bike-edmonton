@@ -317,7 +317,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Push items upwards */
-    padding: 30px 60px 100px; /* Adjust padding for better spacing */
+    padding: 30px 80px 100px; /* Adjust padding for better spacing */
     z-index: 2;
     flex-wrap: wrap;
 }
@@ -326,6 +326,7 @@ p {
 .hero-txt {
     font-size: 30px;
     width: 60%;
+    z-index: 2;
 }
 
 .gradient {
@@ -454,7 +455,7 @@ footer li {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
 
     .hidden-mobile {
         display: none;
@@ -462,6 +463,10 @@ footer li {
 
     .hidden-desktop {
         display: flex;
+    }
+
+    #hamburger-nav {
+        margin: 0 80px;
     }
     
     /* LAYOUT */
@@ -501,9 +506,13 @@ footer li {
         font-size: 22px; /* Further reduce font size for small screens */
     }
 
-    /* PADDING */
+    /* PADDING & MARGIN*/
     .padding-145 {
         padding: 50px 0px 0px 0px; /* Reduce top padding for mobile */
+    }
+
+    .margin-default{
+        margin: 0 30px;
     }
 
     /* HERO */
@@ -601,8 +610,8 @@ footer li {
 
     .footer-newsletter form {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: start;
         margin: 20px 0;
     }
 
@@ -621,7 +630,7 @@ footer li {
 
     .contact-info {
         display: flex;
-        flex-direction: column; /* Stack the items vertically */
+        flex-direction: row; /* Stack the items vertically */
         text-align: center;
     }
 
@@ -644,4 +653,259 @@ footer li {
         display: none; /* Hide the links section */
     }
 
+}
+
+/* LAPTOP */
+
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+    /* Header adjustment for medium screens */
+    .hidden-mobile {
+        display: flex;  /* Show desktop navigation */
+    }
+
+    .hidden-desktop {
+        display: none;  /* Hide hamburger menu */
+    }
+
+    /* Header adjustments */
+    .header-nav {
+        padding: 0 10px;  /* Adjust padding to ensure content is centered */
+    }
+
+    /* Top Nav adjustments */
+    #top-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    #be-logo img {
+        height: 40px;  /* Resize logo */
+    }
+
+    #top-nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+    }
+
+    #top-nav ul li {
+        margin: 0 10px;  /* Reduce space between items */
+    }
+
+    #top-nav ul li a {
+        font-size: 12px;  /* Smaller font size */
+    }
+
+    #top-nav button.btn-dark {
+        width: 100px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .margin-default {
+        margin: 0 20px;  /* Margin adjustment */
+    }
+}
+
+/* DESKTOP - Larger screens (1280px and above) */
+@media screen and (max-width: 1440px) and (min-width: 1280px) {
+    .hidden-mobile {
+        display: flex;  /* Show desktop navigation */
+    }
+
+    .hidden-desktop {
+        display: none;  /* Hide hamburger menu */
+    }
+}
+
+/* LAYOUT - Larger screens (1440px and above) */
+@media screen and (min-width: 1441px) {
+    
+    /* Flex row adjustments for large screens */
+    .flex-row-around li {
+        width: 30%;  /* Increase width to allow 3 tiles per row */
+        margin-bottom: 50px;  /* Add more space between the rows */
+    }
+
+    .flex-row-around {
+        flex-direction: row; /* Display tiles in a row for large screens */
+        align-items: stretch; /* Stretch the items to fill the available space */
+        justify-content: space-between; /* Ensure even spacing between items */
+        gap: 30px; /* Increase gap between tiles */
+    }
+
+    .flex-row-around li {
+        width: 30%; /* Increase width of individual tiles for larger screens */
+        max-width: none; /* Remove the max-width constraint */
+    }
+
+    .flex-row-evenly {
+        gap: 20px;
+        flex-direction: row; /* Display images and text in a row */
+        text-align: center; /* Keep content centered */
+    }
+
+    .flex-column-left {
+        align-items: center; /* Center text alignment */
+    }
+
+    .flex-row-start {
+        gap: 40px; /* Increase gap for large screens */
+    }
+
+    .flex-column-left h1 {
+        font-size: 36px; /* Increase font size for large screens */
+    }
+
+    /* PADDING & MARGIN */
+    .padding-145 {
+        padding: 80px 0px 0px 0px; /* Increase top padding for large screens */
+    }
+
+    .margin-default {
+        margin: 0 80px; /* Increase margins for large screens to center content better */
+    }
+
+    /* HERO */
+    #hero-img {
+        height: 800px; /* Increase hero image height for larger screens */
+        background-position: center; /* Center the background */
+    }
+
+    .hero-content {
+        flex-direction: row; /* Display content in a row for large screens */
+        align-items: center; /* Align content vertically in the center */
+    }
+
+    .hero-txt {
+        width: 50%; /* Make text take up half the screen */
+        margin-bottom: 30px; /* Increase space between text and button */
+    }
+
+    .hero-content button {
+        margin-left: 20px; /* Space out the button more from the text */
+        align-self: flex-start; /* Align the button to the left */
+    }
+
+    /* EMPOWERING */
+    .pink-logo {
+        height: 250px; /* Increase logo size */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .empowering-txt {
+        width: 50%; /* Allow text to take up more space */
+    }
+
+    .blog-img {
+        width: 100%; /* Ensure image fits container */
+        max-width: 450px; /* Set a larger max-width */
+    }
+
+    .masked-rectangle {
+        max-width: 450px; /* Increase max-width for larger screens */
+    }
+
+    /* TYPOGRAPHY */
+    h1 {
+        font-size: 50px; /* Increase font size for large screens */
+    }
+
+    h2 {
+        font-size: 40px; /* Increase font size for large screens */
+    }
+
+    h3, h4 {
+        font-size: 28px; /* Increase font size for large screens */
+    }
+
+    p {
+        font-size: 22px; /* Increase font size for readability */
+        line-height: 150%; /* Adjust line height for large text */
+    }
+
+    .p-sm {
+        font-size: 14px; /* Increase small text size */
+    }
+
+    .p-med {
+        font-size: 18px; /* Increase medium text size */
+    }
+
+    .all-caps {
+        font-size: 16px; /* Increase all-caps font size */
+    }
+
+    .graphic-txt {
+        font-size: 70px; /* Increase graphic text size */
+    }
+
+    /* FOOTER */
+    .footer-1 {
+        padding: 40px 0px 70px 0px; /* Increase padding for large screens */
+        text-align: center; /* Center the text */
+    }
+
+    /* Footer 2 */
+    .footer2 {
+        display: flex;
+        flex-direction: row; /* Display footer sections in a row */
+        gap: 50px; /* Increase gap between the sections */
+        padding: 50px;
+    }
+
+    /* Footer 2 - left (Newsletter) */
+    .footer-newsletter {
+        text-align: center;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Align input fields and buttons side by side */
+        margin: 20px 0;
+    }
+
+    .footer-newsletter .form-field {
+        width: 100%;
+        max-width: 400px; /* Increase width of form fields */
+        margin-bottom: 20px;
+    }
+
+    /* Footer 2 - center (Contact Info) */
+    .footer-contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* Align items side by side */
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: row; /* Stack the items horizontally */
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; /* Increase margin to separate from content */
+    }
+
+    .social-media img {
+        margin: 15px 10px; /* Increase spacing between social icons */
+    }
+
+    /* Footer 2 - right (Links) */
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        gap: 30px; /* Increase gap between footer links */
+    }
 }

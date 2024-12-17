@@ -27,13 +27,13 @@
 #buy-hero-img {
     background-image: url(../images/buy-heroimg.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, space, content */
     position: relative; 
-}
-.hero-summary {
-    grid-row: 4 / span 1;
-    position: relative;
+    height: 832px;
+    color: white; /* For text visibility over the image */ 
 }
 
 /* BUYING GUIDE */
@@ -196,4 +196,19 @@
 .border {
     border: 3px solid #D6E2F1;
     padding: 15px 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .flex-row-center li {
+        flex: 1 0 45%; /* Adjusts to two items per row on small screens */
+        max-width: 100%; /* Limits the size of the tiles */
+    }
+
+    #bookappt button {
+        width: auto;
+        height: 75px;
+        padding: 10px 30px;
+        margin-top: 0;
+        font-size: 14px;
+    }
 }

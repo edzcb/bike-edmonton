@@ -18,16 +18,16 @@
 </head>
 <body>
     <!-- NAVIGATION -->
-    <div id="buy-hero-img" class="hero-grid-category">
+    <section id="buy-hero-img">
         <div class="gradient"></div>
         <header class="margin-default header-nav">
-            <nav id="top-nav" class="flex-row-center">
-                <div id="be-logo"><img src="images/bikeedmlogo-lightblue.png"></div>
+            <nav id="top-nav" class="flex-row-center hidden-mobile">
+                <div id="be-logo"><a href="index.html"><img src="images/bikeedmlogo-lightblue.png"></a></div>
                 <ul>
-                    <li class="all-caps"><a href="#">About</a></li>
-                    <li class="all-caps"><a href="#">Buy Bikes & Parts</a></li>
+                    <li class="all-caps"><a href="about.html">About</a></li>
+                    <li class="all-caps"><a href="buy.html">Buy Bikes & Parts</a></li>
                     <li class="all-caps"><a href="#">Rentals</a></li>
-                    <li class="all-caps"><a href="#">Services</a></li>
+                    <li class="all-caps"><a href="services.html">Services</a></li>
                     <li class="all-caps"><a href="#">Get Involved</a></li>
                     <li class="all-caps"><a href="#">News</a></li>
                     <li class="all-caps"><a href="#">Stories</a></li>
@@ -35,13 +35,24 @@
                 <button class="btn-dark">Contact</button>
             </nav>
         </header>
+    
+    <!-- MOBILE NAVIGATION -->
+    <nav id="top-nav" class="margin-default flex-row-center hidden-desktop">
+        <div id="be-logo"><a href="index.html"><img src="images/bikeedmlogo-lightblue.png"></a></div>
 
-        <section class="margin-default hero-summary">
-            <div class="flex-column-left">
-                <h1>Buy Bikes & Parts</h1> 
-            </div>
-        </section>
-    </div>
+        <div><!-- HAMBURGER --> 
+            <svg width="48" height="23" viewBox="0 0 48 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="2" transform="translate(0 0.634029)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 10.634)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 20.634)" fill="white"/>
+            </svg>
+        </div>
+    </nav>
+    
+        <div class="hero-content">
+            <h1>Buy Bikes & Parts</h1>
+        </div>
+    </section>
 
     <!-- BUYING GUIDE -->
     <section class="margin-default padding-145">
