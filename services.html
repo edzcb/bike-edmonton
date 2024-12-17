@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- STYLE SHEETS -->
+    <!-- STYLE SHEETS -->
    <link rel="stylesheet" href="styles/normalize.css">
    <link rel="stylesheet" href="styles/style.css">
-   <link rel="stylesheet" href="styles/buy.css">
+   <link rel="stylesheet" href="styles/services.css">
 
    <!-- FONTS -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,11 @@
    <!--META-->
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Bike Edmonton | Buy Bikes & Parts </title>
+   <title>Bike Edmonton | Services </title>
 </head>
 <body>
     <!-- NAVIGATION -->
-    <div id="buy-hero-img" class="hero-grid-category">
+    <div id="service-hero-img" class="hero-grid-category">
         <div class="gradient"></div>
         <header class="margin-default header-nav">
             <nav id="top-nav" class="flex-row-center">
@@ -38,103 +38,70 @@
 
         <section class="margin-default hero-summary">
             <div class="flex-column-left">
-                <h1>Buy Bikes & Parts</h1> 
+                <h1>Services</h1> 
             </div>
         </section>
     </div>
 
     <!-- BUYING GUIDE -->
     <section class="margin-default padding-145">
-        <div><h2 class="title-line">Bike Buying Guide</h2></div>
-        <div class="guide-grid padding-85">
-            <img src="images/gearicon.png" class="gear1">
-            <div class="step1">
-                <h3>Book an Appointment</h3>
-            </div>
-            <div class="vl1"></div>
-            <div class="instr1">
-                <p>Please start by browsing our bikes. Once you've found what you like, click the “Book an Appointment” button.
-                Make sure to specify which bikes you're interested in.</p>
-            </div>
-            <img src="images/gearicon.png" class="gear2">
-            <div class="step2">
-                <h3>Select Your Top 3 Bikes To Test Ride</h3>
-            </div>
-            <div class="vl2"></div>
-            <div class="instr2">
-                <p>Note the make, model, size, and colour. You can try out additional bikes if time permits.</p>
-            </div>
-            <img src="images/gearicon.png" class="gear3">
-            <div class="step3">
-                <h3>Only One Rider Can Be Fitted Per Appointment.</h3>
-            </div>
-            <div class="vl3"></div>
-            <div class="instr3">
-                <p>Test rides happen outside so please be prepared for the weather.</p>
-            </div>
-            <img src="images/gearicon.png" class="gear4">
-            <div class="step4">
-                <h3>Please cancel your appointment if you cannot make it.</h3>
-            </div>
-            <div class="vl4"></div>
-            <div class="instr4">
-                <p>No-shows without cancellation will receive lower priority and may be charged a booking fee for future appointments.</p>
-            </div>
-            <img src="images/gearicon.png" class="gear5">
-            <div class="step5">
-                <h3>The Intended Rider Must Be Present For The Bike Fitting.</h3>
-            </div>
-        </div>
+        <div><h2 class="title-line">Learn More About Our Services</h2></div>
     </section>
 
-    <!-- INVENTORY OPTIONS-->
-     <section class="padding-145 inventory-bg">
+    <!-- SERVICE TILES -->
+    <section class="padding-145 inventory-bg">
         <div class="margin-default">
-            <div class="flex-column-left">
-                <h2>Ready?!</h2>
-                <h3>Start browsing our inventory!</h3>
-            </div>
-            <div class="padding-85">
-                <ul class="flex-row-center">
+            <div id="service">
+                <ul class="tiles-grid">
                     <li>
-                        <a href="#" class="flex-column-center">
-                            <img src="images/refurbished.png" class="masked-tile">
-                            <p>Refurbished Bikes</p>
+                        <a href="#" class="tile1">
+                            <div class="tile-content">
+                                <img src="images/repairs.png" class="masked-tile">
+                                <div class="tile-overlay"></div>
+                                <p class="tile-text">Repairs</p>
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex-column-center">
-                            <img src="images/as-is.png" class="masked-tile">
-                            <p>As-is Bikes</p>
+                        <a href="#" class="tile2">
+                            <div class="tile-content">
+                                <img src="images/consultation.png" class="masked-tile">
+                                <div class="tile-overlay"></div>
+                                <p class="tile-text">Consultations</p>
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex-column-center">
-                            <img src="images/accesories.png" class="masked-tile">
-                            <p>Parts & Accessories</p>
+                        <a href="#" class="tile3">
+                            <div class="tile-content">
+                                <img src="images/facility-bookings.png" class="masked-tile">
+                                <div class="tile-overlay"></div>
+                                <p class="tile-text">Facility Bookings</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="tile4">
+                            <div class="tile-content">
+                                <img src="images/courses.png" class="masked-tile">
+                                <div class="tile-overlay"></div>
+                                <p class="tile-text">Courses</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="tile5">
+                            <div class="tile-content">
+                                <img src="images/lunchnlearn.png" class="masked-tile">
+                                <div class="tile-overlay"></div>
+                                <p class="tile-text">Lunch N' Learn</p>
+                            </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-     </section>
-
-     <!-- BOOK APPOINTMENT -->
-    <section class="padding-145">
-        <div id="bookappt" class="flex-column-center">
-            <h2>Know which bike you like?</h2>
-            <h2>Book your appointment now!</h2>
-            <div class="padding-85"><button class="btn-light">Book Appointment</button></div>
-        </div>
     </section>
-
-    <!-- QUESTIONS -->
-     <section class="margin-default padding-145">
-        <div class="flex-row-center border">
-            <p>No appointments availlable?</p>
-            <img src="images/plusicon.png">
-        </div>
-     </section>
 
     <!-- FOOTER -->
     <footer class="footer padding-145">
@@ -207,7 +174,7 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer>    
+    
 </body>
 </html>

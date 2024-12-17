@@ -76,13 +76,6 @@ p {
     color: white;
 }
 
-.p-lg {
-    font-family: "Inter";
-    font-size: 24px;
-    font-weight: 400;
-    color: white;
-}
-
 .all-caps {
     font-family: "Inter";
     font-size: 15px;
@@ -122,6 +115,12 @@ p {
     outline: none;
     border-style: none;
     z-index: 2;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background-color: #F47420;
+    color: white;
 }
 
 .btn-dark {
@@ -171,30 +170,25 @@ p {
     color: white;
 }
 
+.newsletter-form {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .form-field {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    height: 40px;
-    border-style: none;
-    margin: 0;
-    border-radius: 10px 0px 0px 10px;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
 }
 
 .form-button {
-    display: block;
-    box-sizing: border-box;
-    padding: 0;
-    width: 131px;
-    height: 40px;
-    border-style: none;
-    color: white;
     background-color: #04387C;
-    font-family: "Inter";
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    border-radius: 0px 10px 10px 0px;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
 }
 
 /* MARGIN & PADDING */
@@ -224,6 +218,7 @@ p {
     justify-content: space-around;
     align-items: start;
     gap: 218px;
+    flex-wrap: wrap;
 }
 
 .flex-row-around {
@@ -231,6 +226,7 @@ p {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .flex-row-evenly {
@@ -239,6 +235,7 @@ p {
     justify-content: space-evenly;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .flex-row-center-footerc {
@@ -269,25 +266,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.hero-grid {
-    height: 832px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: auto;
-    align-items: center;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: stretch;
-    justify-items: center;
-    padding: 45px 5px;
-    width: 100%;
-    border-top: 2px solid #3C3B3B;
 }
 
 /* HEADER */
@@ -322,9 +300,29 @@ p {
 #hero-img {
     background-image: url(../images/homepage-heroimg.png);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, space, content */
     position: relative; 
+    height: 832px;
+    color: white; /* For text visibility over the image */
+}
+
+.hero-content {
+    grid-row: 3; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Push items upwards */
+    padding: 30px 60px 100px; /* Adjust padding for better spacing */
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+
+.hero-txt {
+    font-size: 30px;
+    width: 60%;
 }
 
 .gradient {
@@ -335,16 +333,6 @@ p {
     top: 0;
     left: 0;
     z-index: 1;
-}
-
-.hero-tag {
-    grid-row: 4 / span 1;
-}
-
-.hero-txt {
-    font-size: 30px;
-    width: 845px;
-    z-index: 2;
 }
 
 /* EMPOWERING CYCLING */
@@ -389,23 +377,66 @@ p {
     border-top: 2px solid #3C3B3B;
 }
 
-.footer-2 {
-    width: 100%;
-    padding: 24px 0px 50px 0px;
+/* FOOTER */
+/* Footer Styles */
+.footer {
+    background-color: #000929;
+    color: #959595;
+}
+
+/* Footer 2 - left */
+.footer2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    padding: 70px;
     border-top: 2px solid #3C3B3B;
 }
 
-.footer-2-left,
-.footer-2-center,
-.footer-2-right {
+.footer-newsletter {
+    font-family: "Inter", sans-serif;
+}
+
+/* Footer 2 - Centre */
+.footer-contact {
     display: flex;
     flex-direction: column;
-    width: 345px;
     align-items: center;
-    justify-content: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
     text-align: start;
-    padding: 5px;
-    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-media img {
+    margin: 15px 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.p-sm{
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer 2 - right */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #D6E2F1;
+    font-size: 14px;
 }
 
 footer li {
@@ -414,4 +445,105 @@ footer li {
     font-weight: 400;
     font-size: 12px;
     color: #959595;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    .hidden-desktop {
+        display: flex;
+    }
+    
+    /* LAYOUT */
+
+    .flex-row-around li {
+        width: 45%;  /* Adjust width to fit two tiles per row */
+        margin-bottom: 35px;  /* Add space between the rows */
+    }
+
+    /* PADDING */
+    .padding-145 {
+        padding: 50px 0px 0px 0px; /* Reduce top padding for mobile */
+    }
+
+    /* HERO */
+    #hero-img {
+        height: 600px; /* Adjust height for smaller screens */
+        background-position: top; /* Focus on the top part if needed */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align text and button to the left */
+    }
+
+    .hero-txt {
+        width: 100%; /* Take full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between text and button */
+    }
+
+    .hero-content button {
+        margin-left: 0; /* Center button under text */
+        align-self: flex-start; /* Align button to match text position */
+    }
+
+    /* EMPOWERING */
+    .pink-logo {
+        height: 200px; /* Reduce the height for smaller screens */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    .empowering-txt {
+        width: 100%; /* Adjust text width to fit smaller screens */
+    }
+
+    .flex-row-around {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align the content for better appearance */
+    }
+
+    .flex-column-left {
+        align-items: center; /* Center text alignment */
+    }
+
+    /* TYPOGRAPHY */
+    h1 {
+        font-size: 32px; /* Reduced from 54px */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduced from 45px */
+    }
+
+    h3, h4 {
+        font-size: 20px; /* Reduced from 30px */
+    }
+
+    p {
+        font-size: 18px; /* Reduced from 26px */
+        line-height: 140%; /* Adjusted line height */
+    }
+
+    .p-sm {
+        font-size: 10px; /* Reduced from 12px */
+    }
+
+    .p-med {
+        font-size: 14px; /* Reduced from 16px */
+    }
+
+    .all-caps {
+        font-size: 12px; /* Reduced from 15px */
+    }
+
+    .graphic-txt {
+        font-size: 40px; /* Reduced from 64px */
+    }
 }

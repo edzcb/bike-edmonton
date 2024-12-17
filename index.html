@@ -18,10 +18,10 @@
 
 <body>
     <!-- NAVIGATION -->
-    <div id="hero-img" class="hero-grid">
+    <section id="hero-img">
         <div class="gradient"></div>
         <header class="margin-default header-nav">
-            <nav id="top-nav" class="flex-row-center">
+            <nav id="top-nav" class="flex-row-center hidden-mobile">
                 <div id="be-logo"><img src="images/bikeedmlogo-navy.png"></div>
                 <ul>
                     <li class="all-caps"><a href="about.html">About</a></li>
@@ -35,15 +35,26 @@
                 <button class="btn-dark">Contact</button>
             </nav>
         </header>
+    
+    <!-- MOBILE NAVIGATION -->
+    <nav id="top-nav" class="margin-default flex-row-center hidden-desktop">
+        <div id="be-logo"><a href="index.html"><img src="images/bikeedmlogo-navy.png"></a></div>
 
-        <section class="hero-tag margin-default">
-            <div class="flex-row-center">
-                <h2 class="hero-txt">Whether you ride once a week or year-round
-                    Bike Edmonton gives you the tools you need to enjoy cycling.</h2>
-                <button class="btn-light">Donate</button>
-            </div>
-        </section>
-    </div>
+        <div><!-- HAMBURGER --> 
+            <svg width="48" height="23" viewBox="0 0 48 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="2" transform="translate(0 0.634029)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 10.634)" fill="white"/>
+            <rect width="48" height="2" transform="translate(0 20.634)" fill="white"/>
+            </svg>
+        </div>
+    </nav>
+    
+        <div class="hero-content">
+            <h2 class="hero-txt">Whether you ride once a week or year-round,
+                Bike Edmonton gives you the tools you need to enjoy cycling.</h2>
+            <button class="btn-light">Donate</button>
+        </div>
+    </section>
 
     <!-- EMPOWERING CYCLING SECTION -->
     <section class="flex-row-around padding-145 margin-default">
@@ -137,75 +148,77 @@
         </div>
      </section>
 
-     <!-- FOOTER -->
-    <footer class="padding-145">
-        <div class="footer-1"> <!-- FOOTER 1 -->
+    <!-- FOOTER -->
+    <footer class="footer padding-145">
+        <!-- FOOTER 1 -->
+        <div class="footer-1">
             <div class="flex-column-center">
                 <p class="graphic-txt">Keep Edmontonians Rolling</p>
                 <button class="btn-orange">Donate Now</button>
             </div>
         </div>
-
+    
         <!-- FOOTER 2 -->
-        <div class="footer-grid"> 
-        <!-- FOOTER 2 LEFT-->
-            <div class="footer-2-left">
-                <div class="flex-column-left-footerl">
-                    <label class="form-label">Subscribe To Our Newsletter</label>
-                    <form class="flex-row-center">
-                        <input type="text" name="Email" class="form-field">
-                        <input type="submit" value="Submit" class="form-button">
-                    </form>
-                    <p class="p-sm">Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to influence our vibrant community. We acknowledge that we are all treaty people and we are committed to equity and justice for all our relations.</p>
-                </div>
+        <div class="footer2">
+            <!-- footer 2 - left -->
+            <div class="footer-newsletter">
+                <label for="newsletter-email" class="form-label">Subscribe To Our Newsletter</label>
+                <form class="newsletter-form">
+                    <input type="email" id="newsletter-email" name="email" class="form-field" placeholder="Enter your email">
+                    <button type="submit" class="form-button">Submit</button>
+                </form>
+                <p class="p-sm">
+                    Bike Edmonton acknowledges that we are located on Treaty 6 territory, a traditional gathering place 
+                    for diverse Indigenous peoples including the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, 
+                    Ojibway / Saulteaux / Anishinaabe, Inuit, and many others whose histories, languages, and cultures 
+                    continue to influence our vibrant community. We acknowledge that we are all treaty people and are 
+                    committed to equity and justice for all our relations.
+                </p>
             </div>
-
-            <div class="footer-2-center"> <!-- FOOTER 2 CENTER -->
-                <div class="flex-row-center">
-                    <div>
-                        <img src="images/bikeedmlogo-ft.png">
-                    </div>
+    
+            <!-- footer 2 - center -->
+            <div class="footer-contact">
+                <div class="contact-info">
+                    <img src="images/bikeedmlogo-ft.png" alt="Bike Edmonton Logo">
                     <div>
                         <p class="p-med">Bike Edmonton</p>
                         <p class="p-sm">10612 105 Ave NW</p>
-                        <p class="p-sm">Edmonton, AB T5H 0L2</p>
+                        <p class="p-sm">Edmonton, AB</p>
+                        <p class="p-sm">T5H 0L2</p>
                     </div>
                 </div>
-                <div class="flex-row-center-footerc">
-                    <img src="images/facebook icon.png">
-                    <img src="images/insta icon.png">
-                    <img src="images/youtube icon.png">
-                    <img src="images/twitter icon.png">
+                <div class="social-media">
+                    <img src="images/facebook icon.png" alt="Facebook">
+                    <img src="images/insta icon.png" alt="Instagram">
+                    <img src="images/youtube icon.png" alt="YouTube">
+                    <img src="images/twitter icon.png" alt="Twitter">
                 </div>
             </div>
-            
-            <!-- FOOTER 2 RIGHT -->
-            <div class="footer-2-right">
-                <div class="flex-row-evenly">
-                    <div> <!-- FOOTER 2 RIGHT/L -->
-                        <p class="p-med">About</p>
-                        <ul>
-                            <li><a href="#">Vision | Mission | Objectives</a></li>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Our Staff</a></li>
-                            <li><a href="#">Board & Governance</a></li>
-                            <li><a href="#">Founders & Sponsors</a></li>
-                        </ul>
-                    </div>
-                    <div> <!-- FOOTER 2 RIGHT/R -->
-                        <p class="p-med">Support Us</p>
-                        <ul>
-                            <li><a href="#">Membership</a></li>
-                            <li><a href="#">Volunteer</a></li>
-                            <li><a href="#">Donate Your Bike</a></li>
-                            <li><a href="#">Make a Financial Donation</a></li>
-                            <li><a href="#">Events</a></li>
-                        </ul>
-                    </div>
+    
+            <!-- footer 2 - right -->
+            <div class="footer-links">
+                <div>
+                    <p class="p-med">About</p>
+                    <ul>
+                        <li><a href="#">Vision | Mission | Objectives</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Our Staff</a></li>
+                        <li><a href="#">Board & Governance</a></li>
+                        <li><a href="#">Founders & Sponsors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="p-med">Support Us</p>
+                    <ul>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate Your Bike</a></li>
+                        <li><a href="#">Make a Financial Donation</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </footer>
 
 </body>

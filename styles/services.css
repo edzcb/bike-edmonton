@@ -1,0 +1,110 @@
+/* TYPOGRAPHY */
+.title-line {
+    width: 100%;
+    padding: 0px 0px 0px 24px;
+    border-left: 3px solid #D6E2F1;
+}
+
+/* LAYOUT */
+.hero-grid-category {
+    height: 832px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    align-items: center;
+}
+
+.tiles-grid {
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    row-gap: 70px;
+}
+
+/* HERO */
+#service-hero-img {
+    background-image: url(../images/services-heroimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    position: relative; 
+}
+.hero-summary {
+    grid-row: 4 / span 1;
+    position: relative;
+}
+
+/* SERVICE TILES */
+.tile-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px; /* Ensures the overlay matches the tile's rounded corners */
+}
+
+.masked-tile {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.masked-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the tile */
+    position: relative;
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 1, 44, 0.33); /* Semi-transparent dark overlay */
+    border-radius: 10px; /* Matches the tile's rounded corners */
+    z-index: 1; /* Ensures the overlay is on top of the image */
+}
+
+.tile-text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    z-index: 2; /* Ensures the text is above the overlay */
+    text-align: center;
+    padding: 5px 10px;
+}
+
+
+.tile1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.tile2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.tile3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.tile4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.tile5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
