@@ -156,7 +156,7 @@ p {
 
 .btn-transparent {
     border: 2px solid #F47420;
-    width: 358px;
+    width: 340px;
     height: 150px;
     padding: 22px 37px;
     border-radius: 10px;
@@ -210,15 +210,15 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .flex-row-start {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-center;
     align-items: start;
-    gap: 218px;
-    flex-wrap: wrap;
+    gap: 150px;
 }
 
 .flex-row-around {
@@ -235,7 +235,6 @@ p {
     justify-content: space-evenly;
     align-items: center;
     gap: 24px;
-    flex-wrap: wrap;
 }
 
 .flex-row-center-footerc {
@@ -266,6 +265,10 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 /* HEADER */
@@ -371,17 +374,17 @@ p {
     transform: translate(-50%, -58%);
 }
 
-.footer-1 {
-    width: 100%;
-    padding: 24px 0px 70px 0px;
-    border-top: 2px solid #3C3B3B;
-}
-
 /* FOOTER */
 /* Footer Styles */
 .footer {
     background-color: #000929;
     color: #959595;
+}
+
+.footer-1 {
+    width: 100%;
+    padding: 24px 0px 70px 0px;
+    border-top: 2px solid #3C3B3B;
 }
 
 /* Footer 2 - left */
@@ -451,7 +454,7 @@ footer li {
     display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 
     .hidden-mobile {
         display: none;
@@ -466,6 +469,36 @@ footer li {
     .flex-row-around li {
         width: 45%;  /* Adjust width to fit two tiles per row */
         margin-bottom: 35px;  /* Add space between the rows */
+    }
+
+    .flex-row-around {
+        flex-direction: column; /* Stack tiles vertically */
+        align-items: center; /* Center the tiles horizontally */
+        justify-content: center; /* Center tiles vertically if necessary */
+        gap: 20px; /* Add space between stacked tiles */
+    }
+
+    .flex-row-around li {
+        width: 90%; /* Make tiles responsive */
+        max-width: 350px; /* Limit the max width for smaller screens */
+    }
+
+    .flex-row-evenly {
+        gap: 10px;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center-align the content for better appearance */
+    }
+
+    .flex-column-left {
+        align-items: center; /* Center text alignment */
+    }
+
+    .flex-row-start {
+        gap: 30px; /* Reduce gap for very small screens */
+    }
+
+    .flex-column-left h1 {
+        font-size: 22px; /* Further reduce font size for small screens */
     }
 
     /* PADDING */
@@ -504,13 +537,13 @@ footer li {
         width: 100%; /* Adjust text width to fit smaller screens */
     }
 
-    .flex-row-around {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center; /* Center-align the content for better appearance */
+    .blog-img {
+        width: 100%; /* Ensure image fits the container */
+        max-width: 320px; /* Set a max-width for smaller screens */
     }
 
-    .flex-column-left {
-        align-items: center; /* Center text alignment */
+    .masked-rectangle {
+        max-width: 320px; /* Adjust the masked container for very small screens */
     }
 
     /* TYPOGRAPHY */
@@ -546,4 +579,69 @@ footer li {
     .graphic-txt {
         font-size: 40px; /* Reduced from 64px */
     }
+
+    /* FOOTER */
+    .footer-1 {
+        padding: 24px 0px 50px 0px; /* Reduce padding for smaller screens */
+        text-align: center; /* Center the text */
+    }
+
+    /* Footer 2 */
+    .footer2 {
+        display: flex;
+        flex-direction: column; /* Stack the columns vertically */
+        gap: 30px; /* Reduce gap between the sections */
+        padding: 30px;
+    }
+
+    /* Footer 2 - left (Newsletter) */
+    .footer-newsletter {
+        text-align: center;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .footer-newsletter .form-field {
+        width: 100%;
+        max-width: 300px; /* Set a max-width for the input field */
+        margin-bottom: 10px;
+    }
+
+    /* Footer 2 - center (Contact Info) */
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center; /* Center the contact info */
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-media img {
+        margin: 10px 5px;
+    }
+
+    /* Footer 2 - right (Links) */
+    .footer-links {
+        display: none; /* Hide the links section */
+    }
+
 }
